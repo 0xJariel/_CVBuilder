@@ -1,49 +1,29 @@
-import { useState } from "react";
+import "./index.css";
 import "./App.css";
 import { styled } from "styled-components";
+import { useState } from "react";
+import Heading from "./Heading";
+import HeadingEditor from "./HeadingEditor";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [heading, setHeading] = useState({
+    fullName: "Jariel Arias",
+    jobTitle: "Full Stack Web Developer",
+    email: "Jariel@gmail.com",
+    phoneNumber: "(123) 456-7890",
+    location: "Denver, Co",
+  });
 
   return (
     <StyledApp>
-      <section className="input-forms-section">
-        <PersonalDetails className="personal-details-input">
-          <label htmlFor="">
-            Full Name
-            <input type="text" />
-          </label>
-          <label htmlFor="">
-            Email
-            <input type="text" />
-          </label>
-          <label htmlFor="">
-            <div>
-              Phone Number <i>recommended</i>
-            </div>
-            <input type="text" />
-          </label>
-          <label htmlFor="">
-            <div>
-              Address <i>recommended</i>
-            </div>
-            <input type="text" />
-          </label>
-        </PersonalDetails>
-      </section>
-      <Preview className="preview-section">
+      <EditorSection>
+        <HeadingEditor setHeading={setHeading} />
+      </EditorSection>
+      <PreviewSection>
         <div className="preview-page">
-          <Heading />
-          <div className="about-me">
-            <div className=""></div>
-            <div className=""></div>
-            <div className=""></div>
-          </div>
-          <div className="education"></div>
-          <div className="work-experience"></div>
-          <div className="end"> {`};`}</div>
+          <Heading heading={heading} />
         </div>
-      </Preview>
+      </PreviewSection>
     </StyledApp>
   );
 }
@@ -55,48 +35,17 @@ const StyledApp = styled.div`
   grid-template-columns: 1fr 1fr;
 `;
 
-const PersonalDetails = styled.form`
-  display: grid;
-  max-width: 500px;
+const EditorSection = styled.section``;
 
-  label {
-    display: grid;
-  }
-`;
-
-const Preview = styled.section`
+const PreviewSection = styled.section`
   height: 100vh;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+
+  h2 {
+    font-size: var(--h2-font-size);
+  }
 
   .preview-page {
   }
 `;
-
-const Heading = () => {
-  const [heading, setHeading] = useState({
-    fullName: "Jariel Arias",
-    title: "Full Stack Web Developer",
-    email: "Jariel@gmail.com",
-    phoneNumber: "Jariel Arias",
-  });
-
-  return (
-    <div className="heading-section">
-      <div className="title">
-        <div className="full-name">Jariel Arias</div>
-        <div className="start">{`{`}</div>
-      </div>
-      <div className="personal-info">
-        <div>
-          // <span className="personal title">{heading.title}</span>
-        </div>
-        <div>
-          // <span className="personal email">{heading.email}</span>
-        </div>
-        <div>
-          //{" "}
-          <span className="personal phone-number">{heading.phoneNumber}</span>
-        </div>
-      </div>
-    </div>
-  );
-};

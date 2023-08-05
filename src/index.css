@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Fira";
+  src: url("./fonts/Fira_Code/static/FiraCode-Bold.ttf") format("truetype");
+  src: url("./fonts/Fira_Code/static/FiraCode-Light.ttf") format("truetype");
+  src: url("./fonts/Fira_Code/static/FiraCode-Medium.ttf") format("truetype");
+  src: url("./fonts/Fira_Code/static/FiraCode-Regular.ttf") format("truetype");
+  src: url("./fonts/Fira_Code/static/FiraCode-SemiBold.ttf") format("truetype");
+}
+
+:root {
+  --font-family: "Fira";
+  --h1-font-size: 80px;
+  --heading-font-size: 20px;
+  --h2--font-size: 28px;
+  --input-font-size: 18px;
+  --preview-font-size: 18px;
+
+  /* font-family: var(--font); */
+}
