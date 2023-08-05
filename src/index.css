@@ -9,11 +9,14 @@
 
 :root {
   --font-family: "Fira";
-  --h1-font-size: 80px;
+  --h1-font-size: 42px;
   --heading-font-size: 20px;
   --h2--font-size: 28px;
-  --input-font-size: 18px;
-  --preview-font-size: 18px;
+  --input-font-size: 10px;
+  --preview-font-size: 10px;
 
-  /* font-family: var(--font); */
+  font-family: var(--font);
+}
+
+h1 {
 }

@@ -1,11 +1,11 @@
 import { styled } from "styled-components";
 
-const AboutMe = () => {
+const AboutMe = (props) => {
   return (
     <StyledAboutMe>
-      <div className=""></div>
-      <div className=""></div>
-      <div className=""></div>
+      <div>{`About Me {`}</div>
+      {props.aboutMe}
+      <div>{`}`}</div>
     </StyledAboutMe>
   );
 };

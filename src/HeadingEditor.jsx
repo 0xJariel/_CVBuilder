@@ -5,9 +5,7 @@ const HeadingEditor = (props) => {
   const setHeading = props.setHeading;
   console.log(setHeading);
   const handleChange = (e) => {
-    console.log(e.target.value);
     const targetName = e.target.name;
-
     setHeading((prev) => ({ ...prev, [targetName]: e.target.value }));
   };
 
