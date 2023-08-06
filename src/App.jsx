@@ -8,6 +8,7 @@ import AboutMe from "./AboutMe";
 import AboutMeEditor from "./AboutMeEditor";
 import Education from "./Education";
 import EducationEditor from "./EducationEditor";
+import uuid from "react-uuid";
 
 function App() {
   const [heading, setHeading] = useState({
@@ -30,12 +31,14 @@ function App() {
       school: `Stanford University`,
       start: "01/08/2021",
       end: "09/20/2023",
+      key: uuid(),
     },
     {
       title: "Electrical Engineering",
       school: `Stanford University`,
       start: "",
       end: "",
+      key: uuid(),
     },
   ]);
 
