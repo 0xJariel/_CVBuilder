@@ -17,10 +17,13 @@ function Education(props) {
 
   return (
     <section className="preview-section">
-      <div className="education start">{`Education {`}</div>
-      <div className="education content"></div>
-      {renderList}
-      <div className="education end">{`}`}</div>
+      {degreeList.length ? (
+        <div className="education start">{`Education {`}</div>
+      ) : null}
+
+      <div className="education content">{renderList}</div>
+
+      {degreeList.length ? <div className="education start">{`}`}</div> : null}
     </section>
   );
 }
