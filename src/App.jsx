@@ -101,10 +101,14 @@ export default App;
 const StyledApp = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: lightblue;
+  background-color: #1e2022;
 `;
 
-const EditorSection = styled.section``;
+const EditorSection = styled.section`
+  display: grid;
+  gap: 20px;
+  color: white;
+`;
 
 const PreviewSection = styled.section`
   height: 100vh;
@@ -115,6 +119,7 @@ const PreviewSection = styled.section`
   padding: 20px 20px;
   background-color: grey;
   font-size: 13px;
+  color: white;
 
   h2 {
     font-size: var(--h2-font-size);

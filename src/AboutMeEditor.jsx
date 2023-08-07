@@ -7,10 +7,17 @@ function AboutMeEditor(props) {
     setAboutMe(e.target.value);
   };
   return (
-    <label>
-      <h2>Short Bio</h2>
-      <input type="text" name="bio" onChange={handleChange} />
-    </label>
+    <div className="input-section">
+      <div className="title">
+        <h2>About Me</h2>
+        <div className="carrot">{`<`}</div>
+      </div>
+      <form action="" className="input-form">
+        <label>
+          <input type="text" name="bio" onChange={handleChange} />
+        </label>
+      </form>
+    </div>
   );
 }
 

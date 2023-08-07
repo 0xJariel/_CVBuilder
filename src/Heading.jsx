@@ -6,7 +6,7 @@ const Heading = (props) => {
   const { fullName, jobTitle, email, phoneNumber, location } = props.heading;
   return (
     <StyledHeading className="heading-section">
-      <div className="title">
+      <div className="header">
         <h1 className="full-name">{fullName}</h1>
         <div className="start">{`{`}</div>
       </div>
@@ -33,13 +33,13 @@ export default Heading;
 const StyledHeading = styled.div`
   /* font-family: var(--font); */
 
-  .title {
+  .header {
     font-size: var(--h1-font-size);
     display: flex;
     gap: 25px;
   }
 
   .personal-info > div {
-    color: red;
+    /* color: red; */
   }
 `;

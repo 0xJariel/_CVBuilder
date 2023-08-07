@@ -72,29 +72,30 @@ const EducationEditor = ({ degreeList, setDegreeList }) => {
   const formMaker = (list) => {
     return list.map((i) => {
       return (
-        <form className="educationForm" key={i.key} id={i.key}>
+        <form className="sectionForm" key={i.key} id={i.key}>
           {labelMaker(i)}
           <button onClick={deleteDegree}>Delete</button>
         </form>
       );
     });
   };
-  const forms = formMaker(degreeList);
+  const form = formMaker(degreeList);
 
   return (
-    <StyledEducationEditor>
+    <StyledEducationEditor className="input-section">
       <div className="title">
-        <h2>Education</h2>
+        <h2 className="editorHeading">Education</h2>
         <button onClick={newDegree}>+</button>
+        <div className="carrot">{`<`}</div>
       </div>
-      {forms}
+      {form}
     </StyledEducationEditor>
   );
 };
 
 export default EducationEditor;
 
-const StyledEducationEditor = styled.section`
+const StyledEducationEditor = styled.div`
   display: grid;
   max-width: 500px;
 

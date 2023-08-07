@@ -75,34 +75,54 @@ const ExpierenceEditor = ({ jobList, setJobList }) => {
   };
 
   const handleResponsibilityChange = (e) => {
-    console.log(e.target.value);
+    e.preventDefault();
+    const name = e.target.name;
+    const key = e.target.parentElement.parentElement.id;
+    console.log("first");
+    console.log(key);
+  };
+
+  const deleteResponsiblity = (e) => {
+    e.preventDefault();
+    console.log(e);
+  };
+
+  const addResponsibility = (e) => {
+    e.preventDefault();
+    console.log(e);
   };
 
   const descriptionMaker = (list) => {
     const responsibilityLabels = [];
 
-    list.forEach((element) => {
+    list.forEach((item) => {
       responsibilityLabels.push(
-        <label htmlFor={element.key} key={element.key} id={element.key}>
+        <div key={item.key}>
           <input
             type="text"
-            name={element.key}
+            name="description"
             onChange={handleResponsibilityChange}
           />
-        </label>
+          <button onClick={deleteResponsiblity}>delete</button>
+        </div>
       );
     });
 
-    return responsibilityLabels;
+    return (
+      <fieldset>
+        <legend>Responsibilities:</legend>
+        <button onClick={addResponsibility}>add description</button>
+        <div>{responsibilityLabels}</div>
+      </fieldset>
+    );
   };
 
   const formMaker = (list) => {
     return list.map((i) => {
       return (
-        <form className="experienceForm" key={i.key} id={i.key}>
+        <form className="sectionForm" key={i.key} id={i.key}>
           {labelMaker(i)}
           <div className="responsibilities">
-            <div>Responsibilities :</div>
             {descriptionMaker(i.responsibilities)}
           </div>
           <button onClick={deleteJob}>Delete</button>
