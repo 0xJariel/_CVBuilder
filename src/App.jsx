@@ -9,6 +9,7 @@ import AboutMeEditor from "./AboutMeEditor";
 import Education from "./Education";
 import EducationEditor from "./EducationEditor";
 import uuid from "react-uuid";
+import Experience from "./Experience";
 
 function App() {
   const [heading, setHeading] = useState({
@@ -42,6 +43,34 @@ function App() {
     },
   ]);
 
+  const [jobList, setJobList] = useState([
+    {
+      jobTitle: "Corporate Communications",
+      companyName: "Amazon",
+      jobStart: "June 2016",
+      jobEnd: "May 2021",
+      responsibilities: [
+        { descrtiption: "Do this and that", key: uuid() },
+        { descrtiption: "call these guys about that thing", key: uuid() },
+        { descrtiption: "Transfer from here to there", key: uuid() },
+      ],
+      key: uuid(),
+    },
+    {
+      jobTitle: "Finance Director",
+      companyName: "Google",
+      jobStart: "",
+      jobEnd: "",
+      jobEnd: "",
+      responsibilities: [
+        { descrtiption: "", key: uuid() },
+        { descrtiption: "", key: uuid() },
+        { descrtiption: "", key: uuid() },
+      ],
+      key: uuid(),
+    },
+  ]);
+
   return (
     <StyledApp>
       <EditorSection>
@@ -57,6 +86,7 @@ function App() {
           <Heading heading={heading} />
           <AboutMe aboutMe={aboutMe} />
           <Education degreeList={degreeList} />
+          <Experience jobList={jobList} />
           <StyledEnd className="end">{`}`}</StyledEnd>
         </div>
       </PreviewSection>
