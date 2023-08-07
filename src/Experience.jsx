@@ -16,7 +16,11 @@ function Experience(props) {
         <div className="body">
           <ul className="responsibilities">
             {i.responsibilities.map((item) => {
-              return <li className="description">{item}</li>;
+              return (
+                <li className="description" key={item.key}>
+                  {item[0]}
+                </li>
+              );
             })}
           </ul>
         </div>
