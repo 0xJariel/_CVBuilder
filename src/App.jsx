@@ -10,6 +10,7 @@ import Education from "./Education";
 import EducationEditor from "./EducationEditor";
 import uuid from "react-uuid";
 import Experience from "./Experience";
+import ExpierenceEditor from "./ExperienceEditor";
 
 function App() {
   const [heading, setHeading] = useState({
@@ -50,9 +51,9 @@ function App() {
       jobStart: "June 2016",
       jobEnd: "May 2021",
       responsibilities: [
-        { descrtiption: "Do this and that", key: uuid() },
-        { descrtiption: "call these guys about that thing", key: uuid() },
-        { descrtiption: "Transfer from here to there", key: uuid() },
+        { description: "Do this and that", key: uuid() },
+        { description: "call these guys about that thing", key: uuid() },
+        { description: "Transfer from here to there", key: uuid() },
       ],
       key: uuid(),
     },
@@ -63,9 +64,9 @@ function App() {
       jobEnd: "",
       jobEnd: "",
       responsibilities: [
-        { descrtiption: "", key: uuid() },
-        { descrtiption: "", key: uuid() },
-        { descrtiption: "", key: uuid() },
+        { description: "", key: uuid() },
+        { description: "", key: uuid() },
+        { description: "", key: uuid() },
       ],
       key: uuid(),
     },
@@ -80,6 +81,7 @@ function App() {
           degreeList={degreeList}
           setDegreeList={setDegreeList}
         />
+        <ExpierenceEditor jobList={jobList} setJobList={setJobList} />
       </EditorSection>
       <PreviewSection>
         <div className="preview-page">

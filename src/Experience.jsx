@@ -18,7 +18,7 @@ function Experience(props) {
             {i.responsibilities.map((item) => {
               return (
                 <li className="description" key={item.key}>
-                  {item[0]}
+                  {item.description}
                 </li>
               );
             })}
