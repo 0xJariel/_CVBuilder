@@ -76,17 +76,15 @@ function App() {
 
   const [skillsList, setSkillsList] = useState([
     {
-      title: "The Odin Project",
-      school: `Stanford University`,
-      start: "01/08/2021",
-      end: "09/20/2023",
+      skill: "Javascript",
       key: uuid(),
     },
     {
-      title: "Electrical Engineering",
-      school: `Stanford University`,
-      start: "",
-      end: "",
+      skill: "React",
+      key: uuid(),
+    },
+    {
+      skill: "Firebase",
       key: uuid(),
     },
   ]);
@@ -103,7 +101,7 @@ function App() {
         <ExpierenceEditor jobList={jobList} setJobList={setJobList} />
         <SkillsEditor skillsList={skillsList} setSkillsList={setSkillsList} />
       </EditorSection>
-      <PreviewSection>
+      <PreviewSection className="preview-side">
         <div className="preview-page">
           <Heading heading={heading} />
           <AboutMe aboutMe={aboutMe} />
@@ -131,24 +129,6 @@ const EditorSection = styled.section`
   color: white;
 `;
 
-const PreviewSection = styled.section`
-  height: 100vh;
-  font-family: "Fira";
-  /* font-family: var(--font-family);
-  font-size: var(--font-size); */
-  width: 460px;
-  height: 650px;
-  padding: 20px 20px;
-  background-color: #333;
-  /* font-size: 13px;
-  color: white; */
-
-  h2 {
-    font-size: var(--h2-font-size);
-  }
-
-  .preview-page {
-  }
-`;
+const PreviewSection = styled.section``;
 
 const StyledEnd = styled.div``;

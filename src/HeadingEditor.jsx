@@ -47,13 +47,4 @@ const HeadingEditor = (props) => {
 
 export default HeadingEditor;
 
-const StyledHeadingEditor = styled.div`
-  display: grid;
-  max-width: 500px;
-  background-color: #181a1b;
-  justify-self: center;
-  width: 100%;
-  padding: 20px 15px;
-  gap: 20px;
-  border-radius: 12px;
-`;
+const StyledHeadingEditor = styled.div``;

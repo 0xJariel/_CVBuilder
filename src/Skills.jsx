@@ -7,10 +7,7 @@ function Skills(props) {
   const renderList = skillsList.map((i, index) => {
     return (
       <StyledItem className="item" key={index}>
-        <div className="skills">{i.title}</div>
-        <div className="skillsYear">{i.year}</div>
-        <div className="startDate">{i.start}</div>
-        <div className="endDate">{i.end}</div>
+        <div className="skills">{i.skill}</div>
       </StyledItem>
     );
   });
