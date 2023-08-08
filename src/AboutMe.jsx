@@ -2,9 +2,9 @@ import { styled } from "styled-components";
 
 const AboutMe = (props) => {
   return (
-    <StyledAboutMe>
+    <StyledAboutMe className="preview-section">
       <div>{`About Me {`}</div>
-      {props.aboutMe}
+      <div className="preview-section-content">{props.aboutMe}</div>
       <div>{`}`}</div>
     </StyledAboutMe>
   );

@@ -15,11 +15,37 @@
   --input-font-size: 10px;
   --preview-font-size: 10px;
 
+  --header-font-color: blue;
+  --header-font-size: 30px;
+  --header-font-family: "Fira";
+  /* --header-font-weight: 100; */
+
   font-family: var(--font);
 }
 
-h1 {
+.header {
   /* color: yellow; */
+  display: flex;
+  gap: 25px;
+  color: var(--header-color);
+  font-size: var(--header-font-size);
+  font-family: var(--header-font-family);
+}
+
+.end {
+  display: grid;
+  color: var(--header-color);
+  font-size: var(--header-font-size);
+  font-family: var(--header-font-family);
+  justify-content: right;
+  /* background-color: #181a1b; */
+  /* height: 150px; */
+  align-items: end;
+  /* font-weight: var(--header-font-weight); */
+  /* color: var(--h1-color);
+  font-size: var(--h1-font-size);
+  font-family: var(--h1-font-family);
+  font-weight: var(--h1-font-weight); */
 }
 
 .input-section {
@@ -31,6 +57,17 @@ h1 {
   padding: 20px 15px;
   gap: 20px;
   border-radius: 12px;
+}
+
+.preview-section {
+  background-color: rebeccapurple;
+  padding: 10px 25px;
+}
+
+.preview-section-content {
+  background-color: red;
+  padding-left: 20px;
+  padding-top: 5px;
 }
 
 .title {

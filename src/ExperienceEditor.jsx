@@ -133,10 +133,11 @@ const ExpierenceEditor = ({ jobList, setJobList }) => {
   const forms = formMaker(jobList);
 
   return (
-    <StyledExperienceEditor>
+    <StyledExperienceEditor className="input-section">
       <div className="title">
         <h2>Experience</h2>
         <button onClick={newJob}>+</button>
+        <div className="carrot">{`<`}</div>
       </div>
       {forms}
     </StyledExperienceEditor>

@@ -37,7 +37,7 @@ function Experience(props) {
         <div className="experience start">{`Experience {`}</div>
       ) : null}
 
-      <div className="experience content">{renderList}</div>
+      <div className="experience preview-section-content">{renderList}</div>
 
       {jobList.length ? <div className="experience start">{`}`}</div> : null}
     </section>

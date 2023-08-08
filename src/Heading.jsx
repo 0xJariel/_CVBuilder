@@ -5,23 +5,25 @@ import "./index.css";
 const Heading = (props) => {
   const { fullName, jobTitle, email, phoneNumber, location } = props.heading;
   return (
-    <StyledHeading className="heading-section">
+    <StyledHeading className="">
       <div className="header">
         <h1 className="full-name">{fullName}</h1>
         <div className="start">{`{`}</div>
       </div>
-      <div className="personal-info">
-        <div>
+      <div className="preview-section">
+        <div className="heading-p">
           // <span className="personal job-title">{jobTitle}</span>
         </div>
-        <div>
+        <div className="heading-p">
           // <span className="personal email">{email}</span>
         </div>
-        <div>
+        <div className="heading-p">
           // <span className="personal phone-number">{phoneNumber}</span>
         </div>
-        <div>
-          // <span className="personal location">{location}</span>
+        <div className="heading-p">
+          <div>
+            // <span className="personal location">{location}</span>
+          </div>
         </div>
       </div>
     </StyledHeading>
@@ -34,9 +36,6 @@ const StyledHeading = styled.div`
   /* font-family: var(--font); */
 
   .header {
-    font-size: var(--h1-font-size);
-    display: flex;
-    gap: 25px;
   }
 
   .personal-info > div {

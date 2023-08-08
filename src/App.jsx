@@ -11,6 +11,8 @@ import EducationEditor from "./EducationEditor";
 import uuid from "react-uuid";
 import Experience from "./Experience";
 import ExpierenceEditor from "./ExperienceEditor";
+import Skills from "./Skills";
+import SkillsEditor from "./SkillsEditor";
 
 function App() {
   const [heading, setHeading] = useState({
@@ -72,6 +74,23 @@ function App() {
     },
   ]);
 
+  const [skillsList, setSkillsList] = useState([
+    {
+      title: "The Odin Project",
+      school: `Stanford University`,
+      start: "01/08/2021",
+      end: "09/20/2023",
+      key: uuid(),
+    },
+    {
+      title: "Electrical Engineering",
+      school: `Stanford University`,
+      start: "",
+      end: "",
+      key: uuid(),
+    },
+  ]);
+
   return (
     <StyledApp>
       <EditorSection>
@@ -82,6 +101,7 @@ function App() {
           setDegreeList={setDegreeList}
         />
         <ExpierenceEditor jobList={jobList} setJobList={setJobList} />
+        <SkillsEditor skillsList={skillsList} setSkillsList={setSkillsList} />
       </EditorSection>
       <PreviewSection>
         <div className="preview-page">
@@ -89,7 +109,8 @@ function App() {
           <AboutMe aboutMe={aboutMe} />
           <Education degreeList={degreeList} />
           <Experience jobList={jobList} />
-          <StyledEnd className="end">{`}`}</StyledEnd>
+          <Skills skillsList={skillsList} setAwardsList={setSkillsList} />
+          <StyledEnd className="end">{`};`}</StyledEnd>
         </div>
       </PreviewSection>
     </StyledApp>
@@ -112,14 +133,15 @@ const EditorSection = styled.section`
 
 const PreviewSection = styled.section`
   height: 100vh;
+  font-family: "Fira";
   /* font-family: var(--font-family);
   font-size: var(--font-size); */
   width: 460px;
   height: 650px;
   padding: 20px 20px;
-  background-color: grey;
-  font-size: 13px;
-  color: white;
+  background-color: #333;
+  /* font-size: 13px;
+  color: white; */
 
   h2 {
     font-size: var(--h2-font-size);
@@ -129,9 +151,4 @@ const PreviewSection = styled.section`
   }
 `;
 
-const StyledEnd = styled.div`
-  color: var(--h1-color);
-  font-size: var(--h1-font-size);
-  font-family: var(--h1-font-family);
-  font-weight: var(--h1-font-weight);
-`;
+const StyledEnd = styled.div``;

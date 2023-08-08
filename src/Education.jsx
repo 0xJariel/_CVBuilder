@@ -21,7 +21,7 @@ function Education(props) {
         <div className="education start">{`Education {`}</div>
       ) : null}
 
-      <div className="education content">{renderList}</div>
+      <div className="education preview-section-content">{renderList}</div>
 
       {degreeList.length ? <div className="education start">{`}`}</div> : null}
     </section>
